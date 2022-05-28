@@ -153,6 +153,17 @@ end
 --group_view: optional, pset id and verb to track with
 -- TODO: make income max at 500k due to new ways to get points, make leaderboards network the threshold to get to a certain level
 AddTitle({
+{1800, "Extrovert", 5000}, 
+{7200, "Audiophile", 10000},            
+{18000, "Swamp DJ", 15000}, 
+{36000, "Swamp FM Radio", 20000},        
+{64000, "Earsplitter", 25000},
+{12400, "TOP Charts Musician", 30000},
+{500000, "Swamp Celebrity", 100000},
+{1000000, "Swamp Superstar", 100000},                                    
+}, "Use Voice-Chat for %s seconds.", "s_sec_speaking")
+                
+AddTitle({
     {1800, "Squatter", 5000},
     {7200, "Western Spy", 10000},
     {3600 * 10, "Hardbass Enthusiast", 25000},
@@ -347,8 +358,7 @@ AddTitle({
     {20, "Protector"},
     {100, "Guardian"},
     {500, "Homeland Security"},
-    {2000, "The Law"},
-    {5000, "Peacekeeper"}
+    {2000, "The Law"}
 }, "Kill %s players while protecting your private theater.", "s_theaterdefend")
 
 AddTitle({
@@ -447,6 +457,12 @@ if SERVER and gm == "cinema" then
         end
     end)
 end
+
+}
+
+hook.Add("player:AddStat("speaking")
+for
+IsSpeaking timer.create 
 -- AddTitle("vandal", {
 --     {200, "Tagger", 10000},
 --     {1000, "Vandal", 100000}
